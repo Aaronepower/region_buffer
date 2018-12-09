@@ -220,6 +220,8 @@ impl<T> RegionBuffer<T> {
 
 }
 
+unsafe impl<T> Sync for RegionBuffer<T> {}
+
 impl<T: Clone> RegionBuffer<T> {
     /// Initialise a buffer of `len` size, with all elements initialised to
     /// `element`.
